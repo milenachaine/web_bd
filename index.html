@@ -7,7 +7,7 @@
       <!-- définit l'encodage de la page et son type de contenu -->
       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
       <!-- lien css -->
-      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
       <!-- métadonnées sur la page: auteure, contenu, mots-clés, contact -->
       <meta name="author" content="Milena Chaîne"/>
       <meta name="description" content="projet web/bd"/>
@@ -15,29 +15,29 @@
       <meta name="reply-to" content="monadressemail@gmail.com"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-      <script src="script.js"></script>
+      <script src="js/script.js"></script>
       <!-- JS file -->
-<script src="jquery.easy-autocomplete.min.js"></script>
+<script src="js/jquery.easy-autocomplete.min.js"></script>
 
 <!-- CSS file -->
-<link rel="stylesheet" href="easy-autocomplete.min.css">
+<link rel="stylesheet" href="stylesheets/easy-autocomplete.min.css">
 
 <!-- Additional CSS Themes file - not required-->
-<link rel="stylesheet" href="easy-autocomplete.themes.min.css"> 
+<link rel="stylesheet" href="stylesheets/easy-autocomplete.themes.min.css">
    </head>
 
   <body>
     <h2>v.0 du formulaire de recherche d'une ressource</h2>
-    <form method="GET" action="form.php">
+    <form method="GET" action="db/form.php">
       <fieldset>
        <legend>Accès à la ressource</legend>
-       <input type="checkbox" name="pltfrm" value="1" id="online"/>
+       <input type="checkbox" name="pltfrm[]" value="1" id="online"/>
        <label for="online">en ligne</label><br/>
-       <input type="checkbox" name="pltfrm" value="2" id="windows"/>
+       <input type="checkbox" name="pltfrm[]" value="2" id="windows"/>
        <label for="windows">Windows</label><br/>
-       <input type="checkbox" name="pltfrm" value="3" id="mac"/>
+       <input type="checkbox" name="pltfrm[]" value="3" id="mac"/>
        <label for="mac">MacOS</label><br/>
-       <input type="checkbox" name="pltfrm" value="4" id="linux"/>
+       <input type="checkbox" name="pltfrm[]" value="4" id="linux"/>
        <label for="linux">Linux</label><br/>
       </fieldset>
       <fieldset>
