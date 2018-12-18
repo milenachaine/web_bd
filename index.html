@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns ="http://www.w3.org/1999/xhtml">
+   <!-- métadonnées -->
+   <head>
+      <!-- titre de la page ; attention à l'esperluette -->
+      <title>PROJET</title>
+      <!-- définit l'encodage de la page et son type de contenu -->
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <!-- lien css -->
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <!-- métadonnées sur la page: auteure, contenu, mots-clés, contact -->
+      <meta name="author" content="Milena Chaîne"/>
+      <meta name="description" content="projet web/bd"/>
+      <meta name="keywords" content="php;sql"/>
+      <meta name="reply-to" content="monadressemail@gmail.com"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+      <script src="script.js"></script>
+      <!-- JS file -->
+<script src="jquery.easy-autocomplete.min.js"></script>
+
+<!-- CSS file -->
+<link rel="stylesheet" href="easy-autocomplete.min.css">
+
+<!-- Additional CSS Themes file - not required-->
+<link rel="stylesheet" href="easy-autocomplete.themes.min.css"> 
+   </head>
+
+  <body>
+    <h2>v.0 du formulaire de recherche d'une ressource</h2>
+    <form method="GET" action="form.php">
+      <fieldset>
+       <legend>Accès à la ressource</legend>
+       <input type="checkbox" name="pltfrm" value="1" id="online"/>
+       <label for="online">en ligne</label><br/>
+       <input type="checkbox" name="pltfrm" value="2" id="windows"/>
+       <label for="windows">Windows</label><br/>
+       <input type="checkbox" name="pltfrm" value="3" id="mac"/>
+       <label for="mac">MacOS</label><br/>
+       <input type="checkbox" name="pltfrm" value="4" id="linux"/>
+       <label for="linux">Linux</label><br/>
+      </fieldset>
+      <fieldset>
+       <legend>Langage(s)</legend>
+       <label for="tags">Sélectionner ds liste</label>
+       <input id="tags" type="text" name="lg"/>
+      </fieldset>
+      <input type="reset" value="Tout effacer" />
+      <input type="submit" value="Envoyer" />
+  </body>
