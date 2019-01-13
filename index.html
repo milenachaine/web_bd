@@ -11,19 +11,14 @@
       <!-- métadonnées sur la page: auteure, contenu, mots-clés, contact -->
       <meta name="author" content="Milena Chaîne"/>
       <meta name="description" content="projet web/bd"/>
-      <meta name="keywords" content="php;sql"/>
+      <meta name="keywords" content="php;sql;html"/>
       <meta name="reply-to" content="monadressemail@gmail.com"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
       <script src="js/script.js"></script>
-      <!-- JS file -->
-<script src="js/jquery.easy-autocomplete.min.js"></script>
-
-<!-- CSS file -->
-<link rel="stylesheet" href="stylesheets/easy-autocomplete.min.css">
-
-<!-- Additional CSS Themes file - not required-->
-<link rel="stylesheet" href="stylesheets/easy-autocomplete.themes.min.css">
+      <script src="js/jquery.easy-autocomplete.min.js"></script>
+      <link rel="stylesheet" href="stylesheets/easy-autocomplete.min.css">
+      <link rel="stylesheet" href="stylesheets/easy-autocomplete.themes.min.css">
    </head>
 
   <body>
@@ -41,9 +36,22 @@
        <label for="linux">Linux</label><br/>
       </fieldset>
       <fieldset>
-       <legend>Langage(s)</legend>
+       <legend>Langage</legend>
        <label for="tags">Sélectionner ds liste</label>
        <input id="tags" type="text" name="lg"/>
+      </fieldset>
+      <fieldset>
+       <legend>Catégorie</legend>
+       <label for="cats">Sélectionner ds liste</label>
+       <select name="cats">
+         <option value="none" selected=selected>Non précisé</option>
+         <option value="faq">Questions/réponses</option>
+         <option value="ide">IDE</option>
+         <option value="ed">Editeur de texte</option>
+         <option value="dev1">Développement web (design)</option>
+         <option value="dev2">Développement web (programmation)</option>
+         <option value="crawl">Robot d'indexation</option>
+       </select>
       </fieldset>
       <input type="reset" value="Tout effacer" />
       <input type="submit" value="Envoyer" />

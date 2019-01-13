@@ -1,12 +1,7 @@
 <?php
 require_once("fonctions.php");
-$date = date("d/m/y");
-$heure = date("H:i");
-
-echo $date."\n".$heure;
 
 // Définition des paramètres
-
 $serveur = "localhost";
 $bd = "BaseRessources";
 $login = "root";
@@ -19,17 +14,22 @@ try {
 }
 
 catch(PDOException $e) {
-  echo "Erreur de connexion à la base de données " . $e->getMessage();
+  echo "Erreur de connexion à la base de données ".$e->getMessage();
   die();
 }
+
 $nb_pltfrms = $_GET['pltfrm'];
 if (count($nb_pltfrms) == 1) {
+  $rq = "SELECT Ressources.* FROM Ressources, ResJoinPltfrm, Plateformes WHERE Ressources.ID = ResJoinPltfrm.RES AND Plateformes.ID = ResJoinPltfrm.PLTFRM AND Plateformes.ID = :pltfrm;";
+  $requete2 = $sql->prepare($rq);
+  $requete2->bindParam(':pltfrm',$nb_pltfrms[0]);
+  $res = $requete2->execute();
+  while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
+    liste_puces($ligne);
+  }
+}
 
-$rq = "SELECT Ressources.* FROM Ressources, ResJoinPltfrm, Plateformes WHERE Ressources.ID = ResJoinPltfrm.RES AND Plateformes.ID = ResJoinPltfrm.PLTFRM AND Plateformes.ID = :pltfrm;";
-$requete2 = $sql->prepare($rq);
-$requete2->bindParam(':pltfrm',$nb_pltfrms[0]);
-$res = $requete2->execute();
-while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
-  liste_puces($ligne);
-}
-}
+$date = date("d/m/y");
+$heure = date("H:i");
+echo $date."\n".$heure;
+?>
