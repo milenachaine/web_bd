@@ -45,20 +45,10 @@ h2 {
 h3 {
   font-size: 120%;
   margin: 2em;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 45%;
+  margin-right: 45%;
   text-align: center;
-  padding: 20px;
-  border-style: solid;
-  border-radius: 25px; }
-
-h4 {
-  font-size: 100%;
-  margin: 1em;
-  margin-left: 40%;
-  margin-right: 40%;
-  text-align: center;
-  padding: 20px;
+  padding: 10px;
   border-style: solid;
   border-radius: 25px; }
 
@@ -92,20 +82,21 @@ img {
 a {
   color: #393535;
   font-weight: bold; }
-  a:focus, a:hover {
-    font-weight: normal;
-    font-style: italic; }
+
+a:focus, a:hover {
+  font-weight: normal;
+  font-style: italic; }
 
 a + a {
   margin-left: 0.4em; }
 
 /* Pied de page */
-div#footer {
+#footer_div {
   padding: 5px;
   margin-top: 50px;
   border-radius: 25px;
   border-style: solid; }
 
-p#footer {
+#footer {
   text-align: center;
   font-weight: bold; }

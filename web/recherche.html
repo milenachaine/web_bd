@@ -1,80 +1,89 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns ="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
    <!-- métadonnées -->
    <head>
-      <!-- titre de la page ; attention à l'esperluette -->
+      <!-- titre de la page -->
       <title>Milena Chaîne - Web/BD</title>
       <!-- définit l'encodage de la page et son type de contenu -->
-      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-      <!-- liens css -->
-      <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"/>
-      <link rel="stylesheet" href="../stylesheets/autocomplete/easy-autocomplete.min.css">
-      <link rel="stylesheet" href="../stylesheets/autocomplete/easy-autocomplete.themes.min.css">
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <!-- liens feuilles de styles css -->
+      <link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+      <link rel="stylesheet" type="text/css" href="../stylesheets/autocomplete/easy-autocomplete.min.css" />
+      <link rel="stylesheet" type="text/css" href="../stylesheets/autocomplete/easy-autocomplete.themes.min.css" />
       <!-- métadonnées sur la page: auteure, contenu, mots-clés, contact -->
-      <meta name="author" content="Milena Chaîne"/>
-      <meta name="description" content="projet web/bd"/>
-      <meta name="keywords" content="php;sql;html"/>
-      <meta name="reply-to" content="monadressemail@gmail.com"/>
+      <meta name="author" content="Milena Chaîne" />
+      <meta name="description" content="projet web/bd" />
+      <meta name="keywords" content="php;sql;html" />
+      <meta name="reply-to" content="monadressemail@gmail.com" />
       <!-- scripts javascript -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-      <script src="../js/script.js"></script>
-      <script src="../js/autocomplete/jquery.easy-autocomplete.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+      <script type="text/javascript" src="../js/script.js"></script>
+      <script type="text/javascript" src="../js/autocomplete/jquery.easy-autocomplete.min.js"></script>
    </head>
-
-  <body>
-    <!-- logo -->
-    <div id="logo">
-      <a href="https://experiments.withgoogle.com/autodraw"><img src="logo.png" alt="Logo" /></a>
-    </div>
-    <!-- bandeau : titre -->
-    <div id ="bandeau">
-       <h1><b>Bases de données pour le Web : projet final</b></h1>
-    </div>
-    <!-- menu -->
-    <div id="menu">
-      <a href="index.html">Accueil</a>
-       <a href="recherche.html">Recherche</a>
-       <a href="ajout.html">Ajout</a>
-       <a href="https://github.com/milenachaine/web_bd">GitHub</a>
-    </div>
-    <h2>Recherche</h2>
-    <form method="GET" action="../db/recherche.php">
-      <fieldset>
-       <legend>Accès à la ressource</legend>
-       <input type="checkbox" name="pltfrm[]" value="1" id="online"/>
-       <label for="online">en ligne</label><br/>
-       <input type="checkbox" name="pltfrm[]" value="2" id="windows"/>
-       <label for="windows">Windows</label><br/>
-       <input type="checkbox" name="pltfrm[]" value="3" id="mac"/>
-       <label for="mac">MacOS</label><br/>
-       <input type="checkbox" name="pltfrm[]" value="4" id="linux"/>
-       <label for="linux">Linux</label><br/>
-      </fieldset>
-      <fieldset>
-       <legend>Langage</legend>
-       <label for="tags">Sélectionner ds liste</label>
-       <input id="tags" type="text" name="lg"/>
-      </fieldset>
-      <fieldset>
-       <legend>Catégorie</legend>
-       <label for="cats">Sélectionner ds liste</label>
-       <select name="cats">
-         <option value="none" selected=selected>Non précisé</option>
-         <option value="faq">Questions/réponses</option>
-         <option value="ide">IDE</option>
-         <option value="ed">Editeur de texte</option>
-         <option value="dev1">Développement web (design)</option>
-         <option value="dev2">Développement web (programmation)</option>
-         <option value="crawl">Robot d'indexation</option>
-       </select>
-      </fieldset>
-      <input type="reset" value="Tout effacer" />
-      <input type="submit" value="Envoyer" />
+   <body>
+      <!-- logo -->
+      <div id="logo">
+         <a href="https://experiments.withgoogle.com/autodraw"><img src="logo.png" alt="Logo" /></a>
+      </div>
+      <!-- bandeau : titre -->
+      <div id="bandeau">
+         <h1><b>Bases de données pour le Web : projet final</b></h1>
+      </div>
+      <!-- menu -->
+      <div id="menu">
+         <a href="index.html">Accueil</a>
+         <a href="recherche.html">Recherche</a>
+         <a href="ajout.html">Ajout</a>
+         <a href="http://github.com/milenachaine/web_bd">GitHub</a>
+      </div>
+      <h2>Recherche</h2>
+      <form method="get" action="../db/recherche.php">
+         <fieldset>
+            <legend>Accès à la ressource</legend>
+            <input type="checkbox" name="pltfrm[]" value="1" id="online" />
+            <label for="online">en ligne</label>
+            <br/>
+            <input type="checkbox" name="pltfrm[]" value="2" id="windows" />
+            <label for="windows">Windows</label>
+            <br/>
+            <input type="checkbox" name="pltfrm[]" value="3" id="mac" />
+            <label for="mac">MacOS</label>
+            <br/>
+            <input type="checkbox" name="pltfrm[]" value="4" id="linux" />
+            <label for="linux">Linux</label>
+            <br/>
+         </fieldset>
+         <fieldset>
+            <legend>Langage</legend>
+            <label for="tags">Sélectionner ds liste</label>
+            <input id="tags" type="text" name="lg" />
+         </fieldset>
+         <fieldset>
+            <legend>Catégorie</legend>
+            <label for="cats">Sélectionner ds liste</label>
+            <select name="cats">
+               <option value="none" selected="selected">Non précisé</option>
+               <option value="faq">Questions/réponses</option>
+               <option value="ide">IDE</option>
+               <option value="ed">Editeur de texte</option>
+               <option value="dev1">Développement web (design)</option>
+               <option value="dev2">Développement web (programmation)</option>
+               <option value="crawl">Robot d'indexation</option>
+            </select>
+         </fieldset>
+         <div class="input">
+            <input type="reset" value="Tout effacer" />
+         </div>
+         <div class="input">
+            <input type="submit" value="Envoyer" />
+         </div>
+      </form>
       <!-- pied de page -->
-    <div id ="footer">
-          <p id="footer">
+      <div id="footer_div">
+         <p id="footer">
             Milena Chaîne - web/bd
-          </p>
-    </div>
-  </body>
+         </p>
+      </div>
+   </body>
+</html>
