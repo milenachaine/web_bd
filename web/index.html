@@ -6,24 +6,25 @@
       <title>PROJET</title>
       <!-- définit l'encodage de la page et son type de contenu -->
       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-      <!-- lien css -->
-      <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+      <!-- liens css -->
+      <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"/>
+      <link rel="stylesheet" href="../stylesheets/autocomplete/easy-autocomplete.min.css">
+      <link rel="stylesheet" href="../stylesheets/autocomplete/easy-autocomplete.themes.min.css">
       <!-- métadonnées sur la page: auteure, contenu, mots-clés, contact -->
       <meta name="author" content="Milena Chaîne"/>
       <meta name="description" content="projet web/bd"/>
       <meta name="keywords" content="php;sql;html"/>
       <meta name="reply-to" content="monadressemail@gmail.com"/>
+      <!-- scripts javascript -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-      <script src="js/script.js"></script>
-      <script src="js/jquery.easy-autocomplete.min.js"></script>
-      <link rel="stylesheet" href="stylesheets/easy-autocomplete.min.css">
-      <link rel="stylesheet" href="stylesheets/easy-autocomplete.themes.min.css">
+      <script src="../js/script.js"></script>
+      <script src="../js/autocomplete/jquery.easy-autocomplete.min.js"></script>
    </head>
 
   <body>
     <h2>v.0 du formulaire de recherche d'une ressource</h2>
-    <form method="GET" action="db/form.php">
+    <form method="GET" action="../db/recherche.php">
       <fieldset>
        <legend>Accès à la ressource</legend>
        <input type="checkbox" name="pltfrm[]" value="1" id="online"/>
