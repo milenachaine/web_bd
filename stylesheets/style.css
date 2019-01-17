@@ -9,33 +9,17 @@ body {
 p, li {
   text-align: justify; }
 
-/* Tableaux */
-table, tr, th, td {
-  border: 1px solid #393535;
-  border-collapse: collapse;
-  padding: 10px;
-  text-align: center; }
+div {
+  text-align: center;
+}
 
-table {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 90%; }
+/* Onglets */
+#menu {
+  text-align: center;
+  font-size: 120%;
+  margin: 15px; }
 
-th {
-  font-weight: bold;
-  border-style: double; }
-
-/* Images */
-img {
-  max-width: 60%;
-  max-height: 60%;
-  border-radius: 25px;
-  margin-bottom: 5px;
-  margin-top: 15px; }
-
-/* Titres */
+  /* Titres */
 h1 {
   font-size: 160%;
   margin-top: 1em;
@@ -78,6 +62,32 @@ h4 {
   border-style: solid;
   border-radius: 25px; }
 
+/* Tableaux */
+table, tr, th, td {
+  border: 1px solid #393535;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center; }
+
+th {
+  font-weight: bold;
+  border-style: double; }
+
+table {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%; }
+
+/* Images */
+img {
+  max-width: 60%;
+  max-height: 60%;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  margin-top: 10px; }
+
 /* Liens */
 a {
   color: #393535;
@@ -89,23 +99,13 @@ a {
 a + a {
   margin-left: 0.4em; }
 
-/* En-tête */
-header, div {
-  text-align: center; }
-
-/* Onglets */
-#menu {
-  text-align: center;
-  font-size: 120%;
-  margin: 15px; }
-
 /* Pied de page */
-footer {
+div#footer {
   padding: 5px;
   margin-top: 50px;
   border-radius: 25px;
   border-style: solid; }
 
-p.footer {
+p#footer {
   text-align: center;
   font-weight: bold; }
