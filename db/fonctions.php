@@ -16,7 +16,18 @@ function entete($title,$charset,$stylesheet,$author,$description,$keywords,$repl
   echo "</head>";
   echo "<body>";
 }
+
+function debut($titre){
+  echo "<div id=\"logo\">";
+  echo "<a href=\"https://experiments.withgoogle.com/autodraw\"><img src=\"../web/logo.png\" alt=\"Logo\" /></a></div>";
+  echo "<div id=\"bandeau\"><h1><b>Bases de données pour le Web : projet final</b></h1>  </div><h2>".$titre."</h2>";
+  echo "<div id=\"menu\"><a href=\"../web/index.html\">Accueil</a><a href=\"../web/recherche.html\">Recherche</a><a href=\"../web/ajout.html\">Ajout</a><a href=\"http://github.com/milenachaine/web_bd\">GitHub</a></div>";
+}
 function fin() {
+  echo "<div id=\"footer_div\"><p id=\"footer\">";
+  echo "<a href=\"http://validator.w3.org/check?uri=referer\"><img class=\"valid\" src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\" height=\"31\" width=\"88\" /></a>";
+  echo "<a href=\"http://jigsaw.w3.org/css-validator/check/referer\"> <img class=\"valid\" style=\"border:0;width:88px;height:31px\" src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valide !\" />";
+  echo "</a>Milena Chaîne - Bases de données sur le web (2018-2019, Inalco)</p></div>";
   echo "</body>";
   echo "</html>";
 }
@@ -33,8 +44,24 @@ function tab_xhtml($values, $class) {
   echo "<table class=".$class.">";
   foreach ($values as $value)
   {
-     echo "<tr><td class=\"".$class."\">".$value."</td></tr>";
+    echo "<tr><td class=\"".$class."\">".$value."</td></tr>";
   }
   echo "</table>";
+}
+
+function tab_result($values) {
+  echo "<table>";
+  echo "<th>Nom</th><th>Explication</th><th>URL</th>";
+  echo "<tr>";
+  foreach ($values as $value)
+  {
+    echo "<td>".$value."</td>";
+  }
+  echo "</tr>";
+  echo "</table>";
+}
+
+function retour($page) {
+  echo "<p><a href=\"../web/".$page."\">Retour à la page précédente</a></p>";
 }
 ?>

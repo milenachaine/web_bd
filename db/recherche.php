@@ -17,6 +17,10 @@ catch(PDOException $e) {
   echo "Erreur de connexion à la base de données ".$e->getMessage();
   die();
 }
+
+entete("Milena Chaîne - Web/BD", "utf-8", "../stylesheets/style.css","Milena Chaîne","projet web/bd", "php", "bipbip@gmail.com");
+debut("Résultat de la recherche");
+
 $type_bool = $_GET['type'];
 $nb_pltfrms = $_GET['pltfrm'];
 $lg = $_GET['lg'];
@@ -30,7 +34,7 @@ if (count($nb_pltfrms) == 1) {
   $requete2->bindParam(':cats',$cats);
   $res = $requete2->execute();
   while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
-    liste_puces($ligne);
+    tab_result($ligne);
   }
 }
 else {
@@ -43,7 +47,7 @@ else {
     $requete2->bindParam(':cats',$cats);
     $res = $requete2->execute();
     while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
-      liste_puces($ligne);
+      tab_result($ligne);
     }
   }
   elseif ($type_bool == "or") {
@@ -55,9 +59,10 @@ else {
     $requete2->bindParam(':cats',$cats);
     $res = $requete2->execute();
     while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
-      liste_puces($ligne);
+      tab_result($ligne);
     }
   }
 }
-
+retour("recherche.html");
+ fin();
 ?>

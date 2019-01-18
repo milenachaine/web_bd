@@ -18,13 +18,17 @@ catch(PDOException $e) {
   die();
 }
 
-  $rq = "SELECT * FROM Ressources WHERE Ressources.NOM LIKE CONCAT('%',:terme, '%') OR Ressources.URL LIKE CONCAT('%',:terme, '%') OR Ressources.EXPL LIKE CONCAT('%',:terme, '%');";
-  $requete = $sql->prepare($rq);
-  $requete->bindParam(':terme',$_GET['terme']);
-  $res = $requete->execute();
-  while($ligne = $requete->fetch(PDO::FETCH_OBJ)) {
-    liste_puces($ligne);
-  }
+entete("Milena Chaîne - Web/BD", "utf-8", "../stylesheets/style.css","Milena Chaîne","projet web/bd", "php", "bipbip@gmail.com");
+debut("Résultat de la recherche");
 
+$rq = "SELECT * FROM Ressources WHERE Ressources.NOM LIKE CONCAT('%',:terme, '%') OR Ressources.URL LIKE CONCAT('%',:terme, '%') OR Ressources.EXPL LIKE CONCAT('%',:terme, '%');";
+$requete = $sql->prepare($rq);
+$requete->bindParam(':terme',$_GET['terme']);
+$res = $requete->execute();
+while($ligne = $requete->fetch(PDO::FETCH_OBJ)) {
+  tab_result($ligne);
+}
+retour("index.html");
+fin();
 
 ?>

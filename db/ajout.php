@@ -18,6 +18,9 @@ catch(PDOException $e) {
   die();
 }
 
+entete("Milena Chaîne - Web/BD", "utf-8", "../stylesheets/style.css","Milena Chaîne","projet web/bd", "php", "bipbip@gmail.com");
+debut("Résultat de la demande d'ajout");
+
 $req = $sql->prepare('INSERT INTO Ressources (LIEN, NOM, LANGAGE) VALUES(:url, :name, :expl)');
 try {
     // Définition des paramètres
@@ -27,14 +30,16 @@ try {
     // Exécution de la requête
     $resultat = $req->execute();
     if($resultat) {
-        echo "Enregistrement réussi";
+        echo "La demande d'ajout a été prise en compte !";
     }
     else {
-      echo ":(";
+      echo "Il y a un problème avec le formulaire ; la requête n'a pas été prise en compte.";
     }
 }
 
 catch( Exception $e ){
     echo 'Erreur de requête : ', $e->getMessage();
 }
+retour("ajout.html");
+fin();
 ?>

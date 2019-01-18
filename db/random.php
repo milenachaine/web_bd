@@ -17,12 +17,15 @@ catch(PDOException $e) {
   echo "Erreur de connexion à la base de données ".$e->getMessage();
   die();
 }
+entete("Milena Chaîne - Web/BD", "utf-8", "../stylesheets/style.css","Milena Chaîne","projet web/bd", "php", "bipbip@gmail.com");
+debut("Résultat de la recherche");
 
-$rq = "SELECT * FROM Ressources ORDER BY RAND() LIMIT 1;";
+$rq = "SELECT Ressources.NOM, Ressources.EXPL, Ressources.URL FROM Ressources ORDER BY RAND() LIMIT 1;";
 $requete = $sql->prepare($rq);
 $res = $requete->execute();
 while($ligne = $requete->fetch(PDO::FETCH_OBJ)) {
-    liste_puces($ligne);
+    tab_result($ligne);
 }
-
+retour("index.html");
+fin();
 ?>
