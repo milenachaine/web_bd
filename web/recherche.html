@@ -40,7 +40,10 @@
       <h2>Recherche</h2>
       <form method="get" action="../db/recherche.php">
          <fieldset>
-            <legend>Accès à la ressource</legend>
+            <legend>Accès à la ressource (2 choix max)</legend>
+            <input type="radio" id="and" name="type" value="and" /> Ressource accessible sur <b>toutes</b> les plateformes sélectionnées<br/>
+            <input type="radio" id="or" name="type" value="or" /> Ressource acessible sur <b>au moins une</b> ressource sélectionnée<br/>
+            <br/>
             <input type="checkbox" name="pltfrm[]" value="1" id="online" />
             <label for="online">en ligne</label>
             <br/>
@@ -56,20 +59,19 @@
          </fieldset>
          <fieldset>
             <legend>Langage</legend>
-            <label for="tags">Sélectionner ds liste</label>
+            <label for="tags">Sélectionner un langage de programmation dans la liste</label>
             <input id="tags" type="text" name="lg" />
          </fieldset>
          <fieldset>
             <legend>Catégorie</legend>
             <label for="cats">Sélectionner ds liste</label>
             <select name="cats">
-               <option value="none" selected="selected">Non précisé</option>
-               <option value="faq">Questions/réponses</option>
-               <option value="ide">IDE</option>
-               <option value="ed">Editeur de texte</option>
-               <option value="dev1">Développement web (design)</option>
-               <option value="dev2">Développement web (programmation)</option>
-               <option value="crawl">Robot d'indexation</option>
+               <option value="3">Questions/réponses</option>
+               <option value="4">IDE</option>
+               <option value="5">Editeur de texte</option>
+               <option value="6">Développement web (design)</option>
+               <option value="7">Développement web (programmation)</option>
+               <option value="8">Robot d'indexation</option>
             </select>
          </fieldset>
          <div class="input">

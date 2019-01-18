@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  alert( "Formulaire !" );
 
   //autocomplétion
   var langages = {

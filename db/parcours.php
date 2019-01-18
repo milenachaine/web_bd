@@ -19,10 +19,10 @@ catch(PDOException $e) {
 }
 
   $rq = "SELECT * FROM Ressources WHERE Ressources.NOM LIKE CONCAT('%',:terme, '%') OR Ressources.URL LIKE CONCAT('%',:terme, '%') OR Ressources.EXPL LIKE CONCAT('%',:terme, '%');";
-  $requete2 = $sql->prepare($rq);
-  $requete2->bindParam(':terme',$_GET['terme']);
-  $res = $requete2->execute();
-  while($ligne = $requete2->fetch(PDO::FETCH_OBJ)) {
+  $requete = $sql->prepare($rq);
+  $requete->bindParam(':terme',$_GET['terme']);
+  $res = $requete->execute();
+  while($ligne = $requete->fetch(PDO::FETCH_OBJ)) {
     liste_puces($ligne);
   }
 
