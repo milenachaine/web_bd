@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  //autocomplétion
+  //gestion de l'autocomplétion
   var langages = {
     data: ["Python", "Perl", "C++", "CSS", "PHP", "Java", "Javascript", "SQL", "Ruby"],
     placeholder: "Langage de programmation",

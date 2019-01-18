@@ -39,12 +39,15 @@
       </div>
       <h2>Recherche</h2>
       <p>Pour effectuer une recherche spécifique dans la base, merci de remplir le formulaire ci-dessous <b>en entier</b>.</p>
+      <!-- le plus gros formulaire -->
       <form method="get" action="../db/recherche.php">
          <fieldset>
             <legend>Accès à la ressource (2 choix max)</legend>
+            <!-- gestion du choix entre AND et OR: premier paramètre -->
             <input type="radio" id="and" name="type" value="and" /> Ressource accessible sur <b>toutes</b> les plateformes sélectionnées<br/>
             <input type="radio" id="or" name="type" value="or" /> Ressource accessible sur <b>au moins une</b> ressource sélectionnée<br/>
             <br/>
+            <!-- paramètre : nombre de plateformes (idéalement limité à 2 en javascript)-->
             <input type="checkbox" name="pltfrm[]" value="1" id="online" />
             <label for="online">en ligne</label>
             <br/>
@@ -59,13 +62,15 @@
             <br/>
          </fieldset>
          <fieldset>
+           <!-- troisième paramètre : choix du langage (autocomplétion) -->
             <legend>Langage</legend>
             <label for="tags">Sélectionner un langage de programmation dans la liste</label>
             <input id="tags" type="text" name="lg" />
          </fieldset>
          <fieldset>
+           <!-- quatrième paramètre : catégorie -->
             <legend>Catégorie</legend>
-            <label for="cats">Sélectionner ds liste</label>
+            <label for="cats">Sélectionner dans la liste</label>
             <select id="cats" name="cats">
                <option value="3">Questions/réponses</option>
                <option value="4">IDE</option>

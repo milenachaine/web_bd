@@ -21,6 +21,7 @@ catch(PDOException $e) {
 entete("Milena Chaîne - Web/BD", "utf-8", "../stylesheets/style.css","Milena Chaîne","projet web/bd", "php", "bipbip@gmail.com");
 debut("Résultat de la demande d'ajout");
 
+//requête d'insertion d'élément dans la table Ressources (simplifié pour ne pas devoir gérer les tables de jointures)
 $req = $sql->prepare('INSERT INTO Ressources (LIEN, NOM, LANGAGE) VALUES(:url, :name, :expl)');
 try {
     // Définition des paramètres
@@ -29,6 +30,7 @@ try {
     $req->bindParam(':expl', $_GET['expl']);
     // Exécution de la requête
     $resultat = $req->execute();
+    //on renvoie juste un message d'erreur ou de réussite
     if($resultat) {
         echo "La demande d'ajout a été prise en compte !";
     }
