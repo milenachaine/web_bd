@@ -78,6 +78,12 @@ img {
   margin-bottom: 5px;
   margin-top: 10px; }
 
+img.valid {
+  border-radius: 0px;
+  margin: 2px;
+  vertical-align: middle;
+}
+
 /* Liens */
 a {
   color: #393535;
